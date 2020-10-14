@@ -1,0 +1,28 @@
+---
+title: "Ein einfaches Beispiel"
+author: "Sebastian Ottmann"
+date: "14 10 2020"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown
+
+Die ist ein einfaches Word-Beispiel mit Markdown und knitr:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+Natürlichkönnen auch direkt Grafiken in das Dokument eingebunden werden:
+
+```{r pressure}
+plot(pressure)
+```
+
+Im Setup ist `echo = FALSE` aktiviert, daher wird der R-Syntax nicht mit ausgegeben.
