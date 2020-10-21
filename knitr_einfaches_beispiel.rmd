@@ -1,7 +1,6 @@
 ---
 title: "Ein einfaches Beispiel"
 author: "Sebastian Ottmann"
-date: "14 10 2020"
 output: word_document
 ---
 
@@ -17,7 +16,7 @@ Die ist ein einfaches Word-Beispiel mit Markdown und knitr:
 summary(cars)
 ```
 
-## Including Plots
+## Grafiken einbinden
 
 Natürlichkönnen auch direkt Grafiken in das Dokument eingebunden werden:
 
