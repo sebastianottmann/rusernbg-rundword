@@ -1,0 +1,34 @@
+---
+title: "Ein Beispiel mit Erweiterungen"
+author: "Sebastian Ottmann"
+date: "21 10 2020"
+output:
+  word_document:
+    toc: yes
+    toc_depth: 5
+    reference_docx: 'resourcen/rmarkdown_reference.docx'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown
+
+Die ist ein erweitertes Word-Beispiel mit Markdown und knitr:
+
+```{r cars}
+summary(cars)
+```
+
+\newpage
+
+## Grafiken einbinden
+
+Natürlichkönnen auch direkt Grafiken in das Dokument eingebunden werden:
+
+```{r pressure}
+plot(pressure)
+```
+
+Im Setup ist `echo = FALSE` aktiviert, daher wird der R-Syntax nicht mit ausgegeben.
