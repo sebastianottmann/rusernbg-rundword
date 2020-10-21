@@ -14,8 +14,10 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## R Markdown
+<br><p>
 
 Die ist ein erweitertes Word-Beispiel mit Markdown und knitr:
+<br><p><br>
 
 ```{r cars}
 summary(cars)
@@ -25,7 +27,7 @@ summary(cars)
 
 ## Grafiken einbinden
 
-Natürlichkönnen auch direkt Grafiken in das Dokument eingebunden werden:
+Natürlich können auch direkt Grafiken in das Dokument eingebunden werden:
 
 ```{r pressure}
 plot(pressure)

@@ -111,7 +111,7 @@ ft <- compose(x = ft, j = "drat",
 
 ft <- compose(x = ft, j = "qsec",
               value = as_paragraph(
-                value = linerange(value =qsec, )
+                value = linerange(value =qsec)
               ))
 # Auch bei linerange kann man min- und max-Werte definieren
 
