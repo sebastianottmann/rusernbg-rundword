@@ -42,3 +42,7 @@ Paket | Beschreibung | Internetseite
 ftExtra | Zusätzliche Funktionen für das flextable Paket | https://ftextra.atusy.net/index.html
 sjlabelled | Funktionen zur Arbeit mit gelabelten Daten (z. B. aus SPSS) | https://strengejacke.github.io/sjlabelled/index.html
 rbbt | R-Studio-Add-In das eine Verbindung zur Literaturdatenbank Zotero herstellt | https://github.com/paleolimbot/rbbt
+
+## Vielen Dank für die Aufmerksamkeit!
+
+Alle Dateien und Materialien sind unter https://github.com/sebastianottmann/rusernbg-rundword zu finden.
