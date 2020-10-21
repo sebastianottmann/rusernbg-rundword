@@ -1,0 +1,44 @@
+---
+title: "R und Word"
+author: "Sebastian Ottmann"
+date: "21 10 2020"
+output:
+  slidy_presentation: default
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown und knitr
+
+Mit R Markdown kann man sich auch Word-Dokumente ausgeben lassen. 
+
+Funktion output: word_document
+
+Hierbei kann eine Formatvorlage hinterlegt und ein Inhaltsverzeichnis integriert werden.
+
+## officeverse
+
+David Gohel hat mehrere Pakete entwickelt zur Interkation zwischen R und Microsoft Word bzw. Powerpoint:
+
+Paket | Beschreibung | Internetseite
+----- | ------------ | -------------
+officr | Paket zur Erstellung von Word- und Powerpoint-Dateien ohne Markdown | https://davidgohel.github.io/officer/ 
+officedown | Ergänzende Funktionen zur Erstellung von Word-Dokumente mit R Markdown | https://davidgohel.github.io/officedown/index.html
+flextable | Funktionen zur Erstellung von Tabellen die auch in Word-Dokumente integriert werden können | https://davidgohel.github.io/flextable/index.html
+
+Die Pakete (und weitere) werden im Buch officeverse näher beschrieben: https://ardata-fr.github.io/officeverse/index.html
+
+
+
+## Weitere Pakete, die die arbeit erleichtern
+
+Mit folgenden Paketen habe ich bisher gute Erfahrung gemacht bei der Erstellung von Berichten:
+
+Paket | Beschreibung | Internetseite
+----- | ------------ | -------------
+ftExtra | Zusätzliche Funktionen für das flextable Paket | https://ftextra.atusy.net/index.html
+sjlabelled | Funktionen zur Arbeit mit gelabelten Daten (z. B. aus SPSS) | https://strengejacke.github.io/sjlabelled/index.html
+rbbt | R-Studio-Add-In das eine Verbindung zur Literaturdatenbank Zotero herstellt | https://github.com/paleolimbot/rbbt
