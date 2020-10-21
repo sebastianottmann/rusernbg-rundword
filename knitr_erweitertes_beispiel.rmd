@@ -6,7 +6,7 @@ output:
   word_document:
     toc: yes
     toc_depth: 5
-    reference_docx: 'resourcen/rmarkdown_reference.docx'
+    reference_docx: 'ressourcen/rmarkdown_reference.docx'
 ---
 
 ```{r setup, include=FALSE}
