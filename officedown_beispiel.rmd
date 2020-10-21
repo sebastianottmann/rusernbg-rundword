@@ -1,0 +1,187 @@
+---
+output: 
+  officedown::rdocx_document:
+    reference_docx: 'ressourcen/rmarkdown_reference_erste_seite_ohne.docx'
+bibliography: ressourcen/literatur.bib
+csl: ressourcen/deutsche-gesellschaft-fur-psychologie.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning=FALSE,
+                      error=FALSE,
+                      message=FALSE,
+                      ft.align="left",
+                      fig.cap=TRUE,
+                      fig.cap.pre = "Abbildung ")
+library(officedown)
+library(officer)
+library(flextable)
+library(ftExtra)
+library(ggplot2)
+library(rbbt)
+```
+
+<!---BLOCK_POUR_DOCX{file: 'ressourcen/bericht_deckblatt.docx'}--->
+
+Dieses Word-Dokument wurde mit dem Paket officedown erstellt, das erweitere Word-Funktionen für Markdown bereitstellt. U. a. gibt es eine Funktion um externe Word-Dateien in den aktuellen Markdown-Output einzubinden. Hierdurch können z. B. Deckblätter von Berichten oder längere Textpassagen eingebunden werden.
+
+# Inhaltsverzeichnis
+<br><p>
+
+<!---BLOCK_TOC--->
+
+# Abbildungsverzeichnis
+<br><p>
+
+<!---BLOCK_TOC{seq_id: 'fig'}--->
+
+
+\newpage
+
+
+# Text in Spalten
+
+## Text in zwei Spalten...
+<br><p>
+
+<!---BLOCK_MULTICOL_START--->
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu pulvinar arcu, quis aliquam dui. In at cursus ante. Vestibulum non sagittis lacus. Duis vitae iaculis dui. Vivamus tempor, nibh ut pretium tempus, enim lorem dignissim quam, at euismod massa magna at magna. Sed facilisis dapibus diam nec volutpat. Maecenas facilisis dapibus egestas. Curabitur dignissim pharetra pulvinar. Nunc bibendum elit sed cursus congue. 
+
+`r run_columnbreak()`Curabitur ligula quam, iaculis faucibus orci quis, vestibulum lobortis lectus. Suspendisse fringilla nisl pulvinar, laoreet tellus sed, sollicitudin tortor. Donec consequat congue erat in iaculis. Curabitur luctus tellus ut turpis iaculis, nec laoreet ligula scelerisque.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu pulvinar arcu, quis aliquam dui. In at cursus ante. Vestibulum non sagittis lacus. Duis vitae iaculis dui. Vivamus tempor, nibh ut pretium tempus, enim lorem dignissim quam, at euismod massa magna at magna. Sed facilisis dapibus diam nec volutpat. Maecenas facilisis dapibus egestas. Curabitur dignissim pharetra pulvinar. Nunc bibendum elit sed cursus congue. Curabitur ligula quam, iaculis faucibus orci quis, vestibulum lobortis lectus. Suspendisse fringilla nisl pulvinar, laoreet tellus sed, sollicitudin tortor. Donec consequat congue erat in iaculis. Curabitur luctus tellus ut turpis iaculis, nec laoreet ligula scelerisque.
+
+<!---BLOCK_MULTICOL_STOP{widths: [3,3], space: 0.2, sep: true}--->
+
+## ...und wieder in normalen Fließtext
+<br><p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu pulvinar arcu, quis aliquam dui. In at cursus ante. Vestibulum non sagittis lacus. Duis vitae iaculis dui. Vivamus tempor, nibh ut pretium tempus, enim lorem dignissim quam, at euismod massa magna at magna. 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu pulvinar arcu, quis aliquam dui. In at cursus ante. Vestibulum non sagittis lacus. Duis vitae iaculis dui. Vivamus tempor, nibh ut pretium tempus, enim lorem dignissim quam, at euismod massa magna at magna. Sed facilisis dapibus diam nec volutpat. Maecenas facilisis dapibus egestas. Curabitur dignissim pharetra pulvinar. Nunc bibendum elit sed cursus congue. Curabitur ligula quam, iaculis faucibus orci quis, vestibulum lobortis lectus. Suspendisse fringilla nisl pulvinar, laoreet tellus sed, sollicitudin tortor. Donec consequat congue erat in iaculis. Curabitur luctus tellus ut turpis iaculis, nec laoreet ligula scelerisque.
+
+<!---BLOCK_LANDSCAPE_START--->
+
+# Querformat...
+<br><p>
+
+Im Dokument kann für einzelne oder mehrere Seiten das Querformat als Ausrichtung gewählt werden. 
+
+```{r, echo=FALSE}
+barplot(1:5, col=1:5)
+```
+
+<!---BLOCK_LANDSCAPE_STOP--->
+
+# ...und danach wieder Hochformat
+<br><p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu pulvinar arcu, quis aliquam dui. In at cursus ante. Vestibulum non sagittis lacus. Duis vitae iaculis dui. Vivamus tempor, nibh ut pretium tempus, enim lorem dignissim quam, at euismod massa magna at magna. Sed facilisis dapibus diam nec volutpat. Maecenas facilisis dapibus egestas. Curabitur dignissim pharetra pulvinar. Nunc bibendum elit sed cursus congue. Curabitur ligula quam, iaculis faucibus orci quis, vestibulum lobortis lectus. Suspendisse fringilla nisl pulvinar, laoreet tellus sed, sollicitudin tortor. Donec consequat congue erat in iaculis. Curabitur luctus tellus ut turpis iaculis, nec laoreet ligula scelerisque.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu pulvinar arcu, quis aliquam dui. In at cursus ante. Vestibulum non sagittis lacus. Duis vitae iaculis dui. Vivamus tempor, nibh ut pretium tempus, enim lorem dignissim quam, at euismod massa magna at magna. Sed facilisis dapibus diam nec volutpat. Maecenas facilisis dapibus egestas. Curabitur dignissim pharetra pulvinar. Nunc bibendum elit sed cursus congue. Curabitur ligula quam, iaculis faucibus orci quis, vestibulum lobortis lectus. Suspendisse fringilla nisl pulvinar, laoreet tellus sed, sollicitudin tortor. Donec consequat congue erat in iaculis. Curabitur luctus tellus ut turpis iaculis, nec laoreet ligula scelerisque.
+
+
+# Tabellen
+<br><p>
+
+Das Paket flextable bietet viele Möglichkeiten zur Formatierung von Tabellen, ein Beispiel mit mtcars-Daten:
+<br><p><br>
+
+<!---BLOCK_LANDSCAPE_START--->
+
+## Tabelle 1
+<br><p>
+
+```{r}
+ft <- flextable(head(mtcars, n = 10))
+ft <- fontsize(ft, size = 11, part="all")
+ft <- font(ft, fontname="Arial", part = "all")
+
+ft <- compose(x = ft, j = "mpg",
+              value = as_paragraph(
+                value = lollipop(value = mpg, min = 0, max = 30, positivecol="#fecc5c", rangecol="#fecc5c")
+              ))
+
+ft <- compose(x = ft, j = "drat",
+              value = as_paragraph(
+                value = minibar(value = drat, max = 6, barcol="#fecc5c")
+              ))
+
+ft <- compose(x = ft, j = "qsec",
+              value = as_paragraph(
+                value = linerange(value =qsec, )
+              ))
+# Auch bei linerange kann man min- und max-Werte definieren
+
+ft <- color(ft, i = ~ hp > 100, j = ~ hp, color="orange")
+ft <- color(ft, i = ~ hp > 150, j = ~ hp, color="red")
+ft <- color(ft, i = ~ hp <= 100, j = ~hp, color="#00b050")
+
+# Fußnoten können direkt mit folgender Funktion eingefügt werden:
+ft <- footnote( ft, i = 1, j = 1:2,
+            value = as_paragraph(
+              c("Das ist Fußnote eins.",
+                "Das ist Fußnote zwei.")
+            ),
+            ref_symbols = c("a", "b"),
+            part = "header")
+
+# Formatierung der Tabelle
+ft <- bg(ft, bg = "#bd0026", part="header")
+ft <- color(ft, color="white", part="header")
+ft <- bold(ft, part="header")
+border_def <- fp_border(color = "#bd0026", width=1)
+ft <- border_remove(x = ft)
+ft <- border_outer(ft, part="body", border = border_def )
+ft <- border_outer(ft, part="header", border = border_def)
+ft <- border_inner_h(ft, part="body", border = border_def )
+ft <- border_inner_v(ft, part="body", border = border_def )
+
+ft <- autofit(ft)
+
+ft
+
+```
+
+<br><p><br>
+
+Fußnoten können auch mit dem Paket ftExtra eingefügt werden (https://ftextra.atusy.net/index.html)
+
+<!---BLOCK_LANDSCAPE_STOP--->
+
+# Abbildungen
+
+
+## Streuung zwischen miles per gallon und weight
+<br><p>
+
+```{r fig.cap="Streuung zwischen miles per gallon (mpg) und weight (wt)"}
+ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point()
+```
+
+\newpage
+
+## Boxplot
+<br><p>
+
+```{r fig.cap="Boxplot", fig.id = "barplot", fig.width=3}
+ggplot(mtcars, aes(y=wt)) + 
+  geom_boxplot()
+```
+<br><p><br>
+
+## Literaturverweise
+<br><p>
+
+In Markdown kann man auch Literaturverweise einfügen. Hier ein Beispiel @eidStatistikUndForschungsmethoden2015 und noch ein Beispiel vgl.  @arzheimerStrukturgleichungsmodelleAnwendungsorientierteEinfuhrung2016, S. 10.
+<br><p><br>
+
+Mit dem Paket rbbt kann ein R-Studio-Addin installiert werden, dass sich direkt mit Zotero verbinden (https://github.com/paleolimbot/rbbt). In der neuen R-Studio-Version soll es eine direkte Schnittstelle zu Zotero geben.
+
+\newpage
+
+# Literaturverzeichnis
+<br><p>
+
